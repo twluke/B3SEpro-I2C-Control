@@ -1,0 +1,97 @@
+#!/bin/bash -e
+
+dac_upd()
+{
+	V=`i2cget -y 1 0x48 "$1"`
+	V=$(( (V & ~$2) | $3 ))
+	i2cset -y 1 0x48 "$1" "$V"
+}
+
+### R1 Automatic input selection (11001100)
+dac_upd 1 0xff 0xcc # 11001100 autoselect enabled
+#dac_upd 1 0xff 0x8c # 10001100 autoselect SPDIF serial
+#dac_upd 1 0xff 0x4c # 01001100 autoselect DSD serial 
+#dac_upd 1 0xff 0x3c # 00111100 autoselect disabled, DSD selected
+#dac_upd 1 0xff 0x1c # 00011100 autoselect disabled, SPDIF selected
+#dac_upd 1 0xff 0x0c # 00001100 autoselect disabled, serial selected
+
+
+### R2 serial Data and Automute 0b00110100
+#dac_upd 2 0xff 0x3c # default 00111100
+#dac_upd 2 0xff 0xf5 # AUTOMUTE_CONFIG_MUTE_THEN_GND 11110101
+
+### R5 Trigger level for automute 0b01110010
+#dac_upd 5 0xff 0x68 # 01110010 default
+
+### R6 Deemphasize filter and Volume ramp rate 0b01001010
+#dac_upd 6 0xff 0x4a # 01001010 default
+
+### R7 filter conf and system mute 0b01000000
+#dac_upd 7 0xff 0x40 # default 1000000
+dac_upd 7 0xff 0x02 # OSF bypass
+
+### R8 GPIO-1_2 Config 0b10001000
+dac_upd 8 0xff 0x88 # default
+
+### R9 GPIO-3_4 Config 0b10001000
+dac_upd 9 0xff 0x88 # default
+
+### R10 Master mode and Sync config 0b00000000
+#dac_upd 10 0xff 0x8a # 10001010
+dac_upd 10 0xff 0x12 # 128fs 00010010
+
+### R12 DPLL Bandwidth 0b01010101
+dac_upd 12 0xff 0x5a # default 01010101
+
+### R13 
+dac_upd 13 0xff 0x20 # default 01010101
+
+### R14 Soft start 0b00001001
+dac_upd 10 0xff 0x8a # default 00001001
+
+### R15 GPIO Input and Volume Conf 0b00001001
+dac_upd 15 0xff 0x01 # stereo 00101011
+
+### R16 Volume 1-8 0b1010000
+dac_upd 16 0xff 0x00 # default 1010000
+
+### R17 Volume 1-8 0b1010000
+dac_upd 17 0xff 0x00 # default 1010000
+
+### R18 Volume 1-8 0b1010000
+dac_upd 18 0xff 0x00 # default 1010000
+
+### R19 Volume 1-8 0b1010000
+dac_upd 19 0xff 0x00 # default 1010000
+
+### R20 Volume 1-8 0b1010000
+dac_upd 20 0xff 0x00 # default 1010000
+
+### R21 Volume 1-8 0b1010000
+dac_upd 21 0xff 0x00 # default 1010000
+
+### R22 Volume 1-8 0b1010000
+dac_upd 22 0xff 0x00 # default 1010000
+
+### R23 Volume 1-8 0b1010000
+dac_upd 23 0xff 0x00 # default 1010000
+
+### R24 
+dac_upd 24 0xff 0xff # default 1010000
+
+### R27  0b01111111
+dac_upd 27 0xff 0x7f # default 
+
+### R32_DEFAULT 0b00000000
+#dac_upd 32 0xff 0x80 # 
+
+### R37 Programmable FIR Config 0b0000000
+#dac_upd 37 0xff 0x00 # OSF enabled
+dac_upd 37 0xff 0x80 # OSF disabled 10000000
+
+### R38-R41 Channel mapping
+dac_upd 38 0xff 0x10 # 0b00010000
+dac_upd 39 0xff 0x32 # 0b00110010
+dac_upd 40 0xff 0x54 # 0b01010100
+dac_upd 41 0xff 0x76 # 0b01110110
+
