@@ -1,8 +1,8 @@
 # B3SEpro-I2C-Control
 
-This is a shell script to control B3SEpro (Twisted Pear Audio) via I2C, focusing on the 128fs function of the es9028pro/es9038pro DACs in sync mode.
+This is a shell script to control B3SEpro (Twisted Pear Audio) via I2C, focusing on the 128fs function of the es9028pro/es9038pro DACs in sync mode. Also this is a modification of the original script specified to es9018 DAC control written by Miroslav Rudišin (https://github.com/miero) and I'd like to be grateful to him for his great contribution.
 
-For now, I'm using a set of Hermes-BBB (running on debian stretch with Botic driver) and Cronus to control B3SEpros (both of 9028pro and 9038pro).
+For now, I'm using a set of Hermes-BBB (running on debian stretch with Botic driver) and Cronus to control B3SEpros (both of 9028pro and 9038pro) with the main setting based on the contentns from Twisted Pear Audio GitHub page.
 
 The setup is as follows:
 
