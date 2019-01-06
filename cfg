@@ -31,7 +31,7 @@ dac_upd 5 0xff 0x68 # 01101000 default
 ### R6 Deemphasize filter and Volume ramp rate 
 dac_upd 6 0xff 0x4a # 01001010 default
 
-### R7 filter conf and system mute 
+### R7 Filter Bandwidth and System Mute 
 #dac_upd 7 0xff 0x40 # default 1000000
 dac_upd 7 0xff 0x02 # 50k@44.1 00000010
 
