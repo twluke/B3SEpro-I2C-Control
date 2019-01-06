@@ -11,3 +11,5 @@ The setup is as follows:
 3. Make sure the DAC (0x48) is well recognized by sending: i2cdetect -r -y 1
 4. The condition to establish 128fs may vary dependent on the source frequency. For example, I usually play upsampled DSD512 sources by HQ player. In this case, a set of 45/49 clocks will be required with a jumper for clock divider set to 1/4 (I don't know why) instead of usual 1/2.
 5. If this script is confirmed to work, making a link in /etc/rc.local will be convenient for automatic setting.
+
+The script is not yet completed and I'd like to appreciate any comments or advices from you, thank you.
