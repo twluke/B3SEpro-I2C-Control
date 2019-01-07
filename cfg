@@ -59,10 +59,10 @@ dac_upd 13 0xff 0x20 # enable (default) 00100000
 dac_upd 14 0xff 0x8a # default 10001010
 
 ### R15 GPIO Input and Volume Config
-dac_upd 15 0xff 0x0d # stereo modei,ch1 mapped to DAC1 00001101
+#dac_upd 15 0xff 0x0d # stereo modei,ch1 mapped to DAC1 00001101
 #dac_upd 15 0xff 0x09 # stereo 00001001
 #dac_upd 15 0xff 0x01 # default on start  00000001
-#dac_upd 15 0xff 0x07 # default on start with Frank's recommend 00000111
+dac_upd 15 0xff 0x07 # Frank's recommend (stereo/all_to_use_ch1/vol_ctl_enabled) 00000111
 
 ### R16 Volume 1-8
 dac_upd 16 0xff 0x00 # default 1010000
