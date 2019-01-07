@@ -49,7 +49,7 @@ dac_upd 10 0xff 0x10 # 128fs enabled 00010000
 #dac_upd 10 0xff 0x8a # master on D_CLK=MCLK/2 128fs disabled 10001010
 
 ### R12 DPLL Bandwidth
-dac_upd 12 0xff 0x5a # default 01010101
+dac_upd 12 0xff 0x5a # default 1011010
 
 ### R13 Jitter Eliminator 
 dac_upd 13 0xff 0x20 # enable (default) 00100000
