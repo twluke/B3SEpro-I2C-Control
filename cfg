@@ -14,15 +14,15 @@ dac_upd 0 0xff 0x00  # 00000000 clock gear MCLK=XIN
 #dac_upd 0 0xff 0x0c # 00001100 clock gear MCLK/8=XIN
 
 ### R1 Automatic input selection
-#dac_upd 1 0xff 0x0c # 00001100 automatically select serial/DSD/SPDIF
-#dac_upd 1 0xff 0x08 # 00001000 automatically select serial/SPDIF 
-dac_upd 1 0xff 0x04 # 00000100 automatically select serial/DSD
-#dac_upd 1 0xff 0x03 # 00000011 only DSD
-#dac_upd 1 0xff 0xe1 # 11100001 only SPDIF
-#dac_upd 1 0xff 0x00 # 00000000 only serial
+#dac_upd 1 0xff 0x0c # 00001100 serial(PCM)/DSD/SPDIF, automatic
+#dac_upd 1 0xff 0x08 # 00001000 serial/SPDIF, automatic
+dac_upd 1 0xff 0x04 # 00000100 serial/DSD, automatic
+#dac_upd 1 0xff 0x03 # 00000011 DSD only
+#dac_upd 1 0xff 0xe1 # 11100001 SPDIF only
+#dac_upd 1 0xff 0x00 # 00000000 serial only
 
 ### R2 serial Data and Automute
-#dac_upd 2 0xff 0xfc # 11111100 AUTOMUTE_CONFIG_MUTE_THEN_GND and I2S
+#dac_upd 2 0xff 0xfc # 11111100 Automute on
 dac_upd 2 0xff 0x3c # 00111100 Automute off
 
 ### R5 Automute Level 
