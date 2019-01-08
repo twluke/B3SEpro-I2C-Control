@@ -104,12 +104,12 @@ dac_upd 25 0xff 0xff # default 1010000
 dac_upd 26 0xff 0xff # default 1010000
 
 ### R27 Master Trim
-dac_upd 27 0xff 0xff # default 1010000
+dac_upd 27 0xff 0x7f # 01111111
 
-### R32_DEFAULT 
+### R32 FIR RAM Address
 dac_upd 32 0xff 0x00 # 
 
-### R37 Programmable FIR Config 
+### R37 FIR Config 
 #dac_upd 37 0xff 0x00 # OSF enabled
 dac_upd 37 0xff 0x80 # OSF disabled 10000000
 
