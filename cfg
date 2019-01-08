@@ -95,25 +95,34 @@ dac_upd 22 0xff 0x00 # default 1010000
 dac_upd 23 0xff 0x00 # default 1010000
 
 ### R24 Master Trim
-dac_upd 24 0xff 0xff # default 1010000
+dac_upd 24 0xff 0xff # 11111111 default
 
 ### R25 Master Trim
-dac_upd 25 0xff 0xff # default 1010000
+dac_upd 25 0xff 0xff # 11111111 default
 
 ### R26 Master Trim
-dac_upd 26 0xff 0xff # default 1010000
+dac_upd 26 0xff 0xff # 11111111 default
 
 ### R27 Master Trim
-dac_upd 27 0xff 0x7f # 01111111
+dac_upd 27 0xff 0x7f # 01111111 default
 
 ### R32 FIR RAM Address
-dac_upd 32 0xff 0x00 # 
+dac_upd 32 0xff 0x00 # 00000000 default
 
 ### R37 FIR Config 
-#dac_upd 37 0xff 0x00 # OSF enabled
-dac_upd 37 0xff 0x80 # OSF disabled 10000000
+#dac_upd 37 0xff 0x00 # 00000000 OSF enabled
+dac_upd 37 0xff 0x80 # 10000000 OSF disabled
 
 ### R38 DAC 1-2 Mapping 
-dac_upd 38 0xff 0x10 # default 00010000
-#dac_upd 38 0xff 0x00 # all ch1 00000000
-#dac_upd 38 0xff 0x11 # all ch2 00010001
+dac_upd 38 0xff 0x10 #  00010000 default
+#dac_upd 38 0xff 0x00 # 00000000 all ch1
+#dac_upd 38 0xff 0x11 # 00010001 all ch2
+
+### R39 DAC 3-4 Mapping 
+dac_upd 39 0xff 0x32 # 00110010 default
+
+### R40 DAC 5-6 Mapping 
+dac_upd 40 0xff 0x54 # 01010100 default
+
+### R41 DAC 7-8 Mapping 
+dac_upd 41 0xff 0x76 # 01110110 default
