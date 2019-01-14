@@ -65,10 +65,11 @@ dac_upd 13 0xff 0x20 # 0b00100000 enable (default)
 dac_upd 14 0xff 0x8a # 0b10001010 default
 
 ### R15 GPIO Input and Volume Config
-#dac_upd 15 0xff 0x0d # 0b00001101 stereo modei,ch1 mapped to DAC1
+#dac_upd 15 0xff 0x07 # 0b00001111 stereo modei,ch1 mapped to DAC1
 #dac_upd 15 0xff 0x09 # 0b00001001 stereo
-#dac_upd 15 0xff 0x01 # 0b00000001 default on start
-dac_upd 15 0xff 0x07 # 0b00000111 Frank's recommend (stereo/all_to_use_ch1/vol_ctl_enabled)
+#dac_upd 15 0xff 0x00 # 0b00000000 8ch (default)
+#dac_upd 15 0xff 0x03 # 0b00000011 8ch with vol cont/latch 
+dac_upd 15 0xff 0x07 # 0b00001111 Frank's recommend (stereo/all_to_use_ch1/vol_ctl_enabled)
 
 ### R16 Volume 1-8
 dac_upd 16 0xff 0x00 # 0b00000000 default
