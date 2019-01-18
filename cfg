@@ -124,9 +124,15 @@ dac_upd 38 0xff 0x10 # 0b00010000 default
 
 ### R39 DAC 3-4 Mapping 
 dac_upd 39 0xff 0x32 # 0b00110010 default
+#dac_upd 39 0xff 0x00 # 0b00000000 all ch1 (left)
+#dac_upd 39 0xff 0x11 # 0b00010001 all ch2 (right)
 
 ### R40 DAC 5-6 Mapping 
 dac_upd 40 0xff 0x54 # 0b01010100 default
+#dac_upd 40 0xff 0x00 # 0b00000000 all ch1 (left)
+#dac_upd 40 0xff 0x11 # 0b00010001 all ch2 (right)
 
 ### R41 DAC 7-8 Mapping 
 dac_upd 41 0xff 0x76 # 0b01110110 default
+#dac_upd 41 0xff 0x00 # 0b00000000 all ch1 (left)
+#dac_upd 41 0xff 0x11 # 0b00010001 all ch2 (right)
