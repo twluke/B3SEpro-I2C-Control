@@ -51,6 +51,9 @@ dac_upd 10 0xff 0x10 # 0b00010000 128fs enabled
 #dac_upd 10 0xff 0x00 # 0b00000000 128fs disabled
 #dac_upd 10 0xff 0x8a # 0b10001010 master on D_CLK=MCLK/2 128fs disabled
 
+### R11 SPDIF Mux and GPIO Inversion
+dac_upd 11 0xff 0x30 # 0b00110000 using DATA3 for SPDIF input
+
 ### R12 DPLL Bandwidth
 #dac_upd 12 0xff 0x5a # 0b01011010 default
 dac_upd 12 0xff 0x00 # 0b00000000 DPLL off 
