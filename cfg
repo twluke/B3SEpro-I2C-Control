@@ -41,7 +41,7 @@ dac_upd 7 0xff 0x02 # 0b00000010 50k@44.1
 ### R8 GPIO-1_2 Config
 #dac_upd 8 0xff 0x88 # 0b10001000 default
 dac_upd 8 0xff 0x80 # 0b10000000 gpio1 for automute status
-#dac_upd 8 0xff 0x8a # 0b10010000 gpio2 for input and gpio1 for automute status
+#dac_upd 8 0xff 0x90 # 0b10010000 gpio2 for input and gpio1 for automute status
 
 ### R9 GPIO-3_4 Config
 #dac_upd 9 0xff 0x88 # 0b10001000 default
