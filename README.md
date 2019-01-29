@@ -1,5 +1,7 @@
 # B3SEpro-I2C-Control
 
+1. cfg
+
 This is a shell script to control B3SEpro (Twisted Pear Audio) via I2C, focusing on the 128fs function of the es9028pro/es9038pro DACs in sync mode. Also this is a modification of the original script specified to es9018 DAC control written by Miroslav Rudišin (https://github.com/miero/botic-tools) and I'd like to be grateful to him for his great contribution.
 
 For now, I'm using a set of Hermes-BBB (running on debian stretch with Botic driver) and Cronus to control B3SEpros (both of 9028pro and 9038pro) with the main setting based on the contents from Twisted Pear Audio GitHub page (https://github.com/twistedpearaudio/Buffalo-III-SE-Pro-On-Board-Firmware).
@@ -16,3 +18,18 @@ The setup is as follows:
 5. If this script is confirmed to work, making a link in /etc/rc.local will be convenient for automatic setting.
 
 The script is not yet completed and may vary day to day but I'm now convinced that it is feasible for daily use. I'd like to appreciate any comments or advices from you, thank you.
+
+2. cfg.py
+
+This is a python script to control B3SEpros via I2C online, originally written by francolargo at diyaudio and transferred here by his courtesy, adding a few modifications. I'm much grateful to him for this script.
+
+Usage: With this script, you can select either serial/DSD input or SPDIF input on the fly. First of all, execute  the command line below:
+
+root@arm:~# python ./cfg.py or root@arm:~# python ./cfg.py &
+
+Then send one of the command lines below (from a different terminal in the former) according to your selection:
+
+echo 'serial' | nc xxx.xxx.xxx.xxx 8192 or echo 'spdif' | nc xxx.xxx.xxx.xxx 8192 (here xxx.xxx.xxx.xxx is the IP address where the script is running)
+
+echo '+' | nc xxx.xxx.xxx.xxx 8192 or echo '-' | nc xxx.xxx.xxx.xxx 8192 will work for volume control.
+
