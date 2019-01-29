@@ -21,7 +21,7 @@ The script is not yet completed and may vary day to day but I'm now convinced th
 
 2. cfg.py
 
-This is a python script to control B3SEpros via I2C online, originally written by francolargo at diyaudio and transferred here by his courtesy, adding a few modifications. I'm much grateful to him for this script.
+This is a python script to control B3SEpros via I2C online, originally written by francolargo at diyaudio and transferred here by his courtesy, adding a few modifications. I'm very grateful to him for this fabcy script.
 
 Usage: With this script, you can select either serial/DSD input or SPDIF input on the fly. First of all, execute  the command line below:
 
