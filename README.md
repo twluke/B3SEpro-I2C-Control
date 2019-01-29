@@ -29,7 +29,7 @@ root@arm:~# python ./cfg.py &
 
 Then send one of the command lines below according to your selection:
 
-echo 'serial' | nc xxx.xxx.xxx.xxx 8192 or echo 'spdif' | nc xxx.xxx.xxx.xxx 8192 (here xxx.xxx.xxx.xxx is the IP address where the script is running)
+echo 'serial' | nc xxx.xxx.xxx.xxx 8192 or echo 'spdif' | nc xxx.xxx.xxx.xxx 8192 (here xxx.xxx.xxx.xxx is the IP address where the script is running; nc -q .1 xxx.xxx.xxx.xxx 8192 if nc xxx.xxx.xxx.xxx 8192 does not work) )
 
 echo '+' | nc xxx.xxx.xxx.xxx 8192 or echo '-' | nc xxx.xxx.xxx.xxx 8192 will work for volume control.
 
