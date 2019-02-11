@@ -27,6 +27,7 @@ dac_upd 2 0xff 0x3c # 0b00111100 Automute off
 
 ### R4 Automute Time
 dac_upd 4 0xff 0x00 # 0b000000 default (automute disabled)
+#dac_upd 4 0xff 0x01 # 0b000001 default (automute set to 8'd1)
 
 ### R5 Automute Level
 dac_upd 5 0xff 0x68 # 0b01101000 default
