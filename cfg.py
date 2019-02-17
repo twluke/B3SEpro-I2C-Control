@@ -93,6 +93,12 @@ class Client(asyncore.dispatcher_with_send):
             bus.write_byte_data(0x48, 0x07, FIR)
         def conFIR():
             bus.write_byte_data(0x48, 0x07, FIR)
+        if  line == '128fs':
+            bus.write_byte_data(0x48, 0x0a, 0x10)
+            bus.write_byte_data(0x48, 0x0c, 0x00)
+        if  line == 'no128':
+            bus.write_byte_data(0x48, 0x0a, 0x00)
+            bus.write_byte_data(0x48, 0x0c, 0x11)
         if  line == 'serial':
             bus.write_byte_data(0x48, 0x01, 0x04)
         if  line == 'spdif':
