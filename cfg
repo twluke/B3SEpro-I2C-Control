@@ -39,7 +39,14 @@ dac_upd 6 0xff 0x4a # 0b01001010 default (auto de-emphasis disabled)
 #dac_upd 6 0xff 0xaa # 0b10101010 default (auto de-emphasis enabled, 48kHz)
 
 ### R7 Filter Bandwidth and System Mute
-#dac_upd 7 0xff 0x80 # 0b01000000 default
+dac_upd 7 0xff 0x80 # 0b01000000 default
+#dac_upd 7 0xff 0x00 # 0b00000000 fast roll-off, linear phase
+#dac_upd 7 0xff 0x20 # 0b00100000 slow roll-off, linear phase
+#dac_upd 7 0xff 0x40 # 0b01000000 fast roll-off, minimum phase
+#dac_upd 7 0xff 0x60 # 0b01100000 slow roll-off, minimum phase
+#dac_upd 7 0xff 0x80 # 0b10000000 apodizing, fast, linear
+#dac_upd 7 0xff 0xc0 # 0b11000000 hybrid, fast, minimum
+#dac_upd 7 0xff 0xe0 # 0b11100000 brickwall
 dac_upd 7 0x0f 0x02 # 0b00000010 50k@44.1
 #dac_upd 7 0x0f 0x04 # 0b00000100 60k@44.1
 #dac_upd 7 0x0f 0x06 # 0b00000110 70k@44.1
