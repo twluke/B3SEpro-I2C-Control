@@ -40,9 +40,9 @@ dac_upd 6 0xff 0x4a # 0b01001010 default (auto de-emphasis disabled)
 
 ### R7 Filter Bandwidth and System Mute
 #dac_upd 7 0xff 0x80 # 0b01000000 default
-dac_upd 7 0xff 0x02 # 0b00000010 50k@44.1
-#dac_upd 7 0xff 0x04 # 0b00000100 60k@44.1
-#dac_upd 7 0xff 0x06 # 0b00000110 70k@44.1
+dac_upd 7 0x0f 0x02 # 0b00000010 50k@44.1
+#dac_upd 7 0x0f 0x04 # 0b00000100 60k@44.1
+#dac_upd 7 0x0f 0x06 # 0b00000110 70k@44.1
 
 ### R8 GPIO-1_2 Config
 #dac_upd 8 0xff 0x88 # 0b10001000 default
