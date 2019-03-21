@@ -8,7 +8,7 @@ For now, I'm using a set of Hermes-BBB (running on debian stretch with Botic dri
 
 The setup is as follows:
 
-* Make sure that the on-board firmware has been removed. Use an isolated I2C header for clean connection to B3SEpro (SCL, SDA and GND only; no 3.3V line required).
+* Make sure that the on-board firmware has been removed. Use an isolated I2C header for clean connection to B3SEpro (SCL, SDA and GND only; occasionally addition of a 3.3V line may be required).
 * Short the DAC_RESET and DVCC GPIO pins on the B3SEpro by a jumper before powering-up and during operation.*
 
 * *Recently I changed the way to connect the RESET and DVCC pins. Though the method above does not do anything harm to the DAC, I though that the better way to utilize this RESET pin is to apply a short period of active low after power-up so that the input is held high after that. To satisfy this condition, I introduced a 3-pin reset monitor (TCM809 from Microchip) to the DAC_RESET, DVCC and GND pins of the GPIO header. I will recommend this method for more secure use of the DAC.
